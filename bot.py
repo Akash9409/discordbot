@@ -37,6 +37,11 @@ async def on_message(message):
   if message.content.startswith('$hello'):
     msg = 'Kya haal hai {0.author.mention}'.format(message)
     await message.channel.send(msg)
+   
+    
+  elif message.content.startswith('$'):
+    msg2 = 'yaar iska abhi tak banaya nahi h {0.author.mention} time do thoda'.format( message )
+    await message.channel.send(msg2)
 
 
 client.run(os.environ['DISCORD_TOKEN'])
