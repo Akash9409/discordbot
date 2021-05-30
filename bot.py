@@ -22,9 +22,7 @@ async def on_message(message):
   if message.author == client.user:
     return
 
-  if message.content.startswith('$inspire'):
-    quote = get_quote()
-    await message.channel.send(quote)
+
 
 
   # if message.content.startswith('$hello'):
@@ -37,6 +35,10 @@ async def on_message(message):
   if message.content.startswith('$hello'):
     msg = 'Kya haal hai {0.author.mention}'.format(message)
     await message.channel.send(msg)
+    
+  elif message.content.startswith('$inspire'):
+    quote = get_quote()
+    await message.channel.send(quote)
    
     
   elif message.content.startswith('$'):
